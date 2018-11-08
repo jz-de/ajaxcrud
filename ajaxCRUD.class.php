@@ -16,7 +16,7 @@
 	/* the Free Software Foundation; either version 2 of the License.       */
 	/************************************************************************/
 	# thanks to the following for help on v6.0:
-	# Mariano Monta�ez Ureta, from Argentina; twitter: @nanomo
+	# Mariano Montaï¿½ez Ureta, from Argentina; twitter: @nanomo
 	# Jing Ling, New Hampshire
 
 	#thanks to Francisco Campos of WebLemurs.com for helping with other misc core updates for v7.2
@@ -290,7 +290,7 @@ class ajaxCRUD{
     var $emptyTableMessage;
 
 	/* these default to english words (e.g. "Add", "Delete" below); but can be
-	   changed by setting them via $obj->addText = "A�adir"
+	   changed by setting them via $obj->addText = "Añadir"
 	*/
 	var $addText, $deleteText, $cancelText, $actionText, $fileDeleteText, $fileEditText; //text values for buttons and other table text
 	var $addButtonText; //if you want to replace the entire add button text with a phrase or other text. Added in 8.81
@@ -329,7 +329,8 @@ class ajaxCRUD{
 
 	// Constructor
     //by default ajaxCRUD assumes all necessary files are in the same dir as the script calling it (eg $ajaxcrud_root = "")
-    function ajaxCRUD($item, $db_table, $db_table_pk, $ajaxcrud_root = "") {
+    // depreciated in near future: function ajaxCRUD($item, $db_table, $db_table_pk, $ajaxcrud_root = "") {
+    function __construct($item, $db_table, $db_table_pk, $ajaxcrud_root = "") {
 
         //global variable - for allowing multiple ajaxCRUD tables on one page
         global $num_ajaxCRUD_tables_instantiated;
@@ -2679,73 +2680,73 @@ if (!function_exists('make_filename_safe')) {
 
    function make_filename_safe($filename) {
       $normalizeChars = array(
-         '�' => 'S',
-         '�' => 's',
-         '�' => 'Dj',
-         '�' => 'Z',
-         '�' => 'z',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'A',
-         '�' => 'C',
-         '�' => 'E',
-         '�' => 'E',
-         '�' => 'E',
-         '�' => 'E',
-         '�' => 'I',
-         '�' => 'I',
-         '�' => 'I',
-         '�' => 'I',
-         '�' => 'N',
-         '�' => 'O',
-         '�' => 'O',
-         '�' => 'O',
-         '�' => 'O',
-         '�' => 'O',
-         '�' => 'O',
-         '�' => 'U',
-         '�' => 'U',
-         '�' => 'U',
-         '�' => 'U',
-         '�' => 'Y',
-         '�' => 'B',
-         '�' => 'Ss',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'a',
-         '�' => 'c',
-         '�' => 'e',
-         '�' => 'e',
-         '�' => 'e',
-         '�' => 'e',
-         '�' => 'i',
-         '�' => 'i',
-         '�' => 'i',
-         '�' => 'i',
-         '�' => 'o',
-         '�' => 'n',
-         '�' => 'o',
-         '�' => 'o',
-         '�' => 'o',
-         '�' => 'o',
-         '�' => 'o',
-         '�' => 'o',
-         '�' => 'u',
-         '�' => 'u',
-         '�' => 'u',
-         '�' => 'y',
-         '�' => 'y',
-         '�' => 'b',
-         '�' => 'y',
-         '�' => 'f');
+         'ï¿½' => 'S',
+         'ï¿½' => 's',
+         'ï¿½' => 'Dj',
+         'ï¿½' => 'Z',
+         'ï¿½' => 'z',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'A',
+         'ï¿½' => 'C',
+         'ï¿½' => 'E',
+         'ï¿½' => 'E',
+         'ï¿½' => 'E',
+         'ï¿½' => 'E',
+         'ï¿½' => 'I',
+         'ï¿½' => 'I',
+         'ï¿½' => 'I',
+         'ï¿½' => 'I',
+         'ï¿½' => 'N',
+         'ï¿½' => 'O',
+         'ï¿½' => 'O',
+         'ï¿½' => 'O',
+         'ï¿½' => 'O',
+         'ï¿½' => 'O',
+         'ï¿½' => 'O',
+         'ï¿½' => 'U',
+         'ï¿½' => 'U',
+         'ï¿½' => 'U',
+         'ï¿½' => 'U',
+         'ï¿½' => 'Y',
+         'ï¿½' => 'B',
+         'ï¿½' => 'Ss',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'a',
+         'ï¿½' => 'c',
+         'ï¿½' => 'e',
+         'ï¿½' => 'e',
+         'ï¿½' => 'e',
+         'ï¿½' => 'e',
+         'ï¿½' => 'i',
+         'ï¿½' => 'i',
+         'ï¿½' => 'i',
+         'ï¿½' => 'i',
+         'ï¿½' => 'o',
+         'ï¿½' => 'n',
+         'ï¿½' => 'o',
+         'ï¿½' => 'o',
+         'ï¿½' => 'o',
+         'ï¿½' => 'o',
+         'ï¿½' => 'o',
+         'ï¿½' => 'o',
+         'ï¿½' => 'u',
+         'ï¿½' => 'u',
+         'ï¿½' => 'u',
+         'ï¿½' => 'y',
+         'ï¿½' => 'y',
+         'ï¿½' => 'b',
+         'ï¿½' => 'y',
+         'ï¿½' => 'f');
 
       $strip = array(
          "~",
@@ -2778,8 +2779,8 @@ if (!function_exists('make_filename_safe')) {
          "&#8221;",
          "&#8211;",
          "&#8212;",
-         "—",
-         "–",
+         "â",
+         "â",
          ",",
          "<",
          ">",
